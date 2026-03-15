@@ -130,3 +130,8 @@ Highlighting the text doesn't work:
 - Most fonts have no glyphs for these code points
 
 The Glassworm attack is so dangerous - you literally cannot see the malicious code, even when you're looking right at it. 
+
+
+# SQL injection
+This technique can be repurposed to hide SQL injection payloads! The core concept is hiding malicious code within invisible Unicode characters, which works for any text-based injection, including SQL.
+
