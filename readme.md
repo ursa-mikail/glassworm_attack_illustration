@@ -61,30 +61,22 @@ In the Glassworm attack, that downloaded payload would then:
 1. The Hidden Part: Between "2.1.0", and debug: false, there are actually invisible Unicode characters (Zero-width spaces and private use characters) that contain malicious code.
 
 2. What it Does: Those invisible characters contain a payload that:
-
-Decodes a hidden script
-
-Fetches additional malware from a remote server
-
-Uses Solana blockchain for command-and-control
-
-Steals credentials, tokens, and secrets from the developer's machine
+- Decodes a hidden script
+- Fetches additional malware from a remote server
+- Uses Solana blockchain for command-and-control
+- Steals credentials, tokens, and secrets from the developer's machine
 
 3. Why It's Dangerous:
-
-You can't see it in any code editor (VS Code, etc.)
-
-Pull requests look legitimate
-
-The attackers use AI to make the commit messages look like normal version bumps or refactors
-
-Once merged, it compromises everyone who uses that code
+- You can't see it in any code editor (VS Code, etc.)
+- Pull requests look legitimate
+- The attackers use AI to make the commit messages look like normal version bumps or refactors
+- Once merged, it compromises everyone who uses that code
 
 This is exactly how the Glassworm attack compromised 151 GitHub repositories - by hiding malicious code in characters that are completely invisible to human reviewers.
 
 [!Ref](https://www.tomshardware.com/tech-industry/cyber-security/malicious-packages-using-invisible-unicode-found-in-151-github-repos-and-vs-code)
 
-### you still cannot see these invisible characters in most editors.
+### You still cannot see these invisible characters in most editors.
 
 What you see when highlighting normal text:
 
@@ -131,7 +123,7 @@ text = "Normal" + '\u200B' + "Normal"
 print(f"\nInvisible chars found: {find_invisible(text)}")  # Shows 1
 ```
 
-highlighting doesn't work:
+Highlighting the text doesn't work:
 - Zero-width characters have no visual representation
 - Variation selectors modify the previous character but don't show
 - Private Use Area characters often render as nothing
